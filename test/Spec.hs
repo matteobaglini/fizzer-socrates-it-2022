@@ -23,3 +23,5 @@ main = hspec $ do
     fizzer 7 `shouldBe` "Bang"
   it "prints fizzbuzzbang" $ do
     fizzer (3*5*7) `shouldBe` "FizzBuzzBang"
+  it "prints fizz (when contains)" $ do
+    fizzer 13 `shouldBe` "Fizz"
