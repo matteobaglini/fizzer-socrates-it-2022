@@ -25,11 +25,12 @@ n // i = n `mod` i == 0
 --     Just a  <> Just b  = Just (a <> b)
 
 fizzer :: Int -> String
-fizzer n = fromMaybe number $ fizz <> buzz <> bang
+fizzer n = fromMaybe number $ foldr (<>) Nothing rules
   where
     fizz = "Fizz" `whenDivBy` 3
     buzz = "Buzz" `whenDivBy` 5
     bang = "Bang" `whenDivBy` 7
+    rules = [fizz, buzz, bang]
     number = show n
     whenDivBy word divisor = if n // divisor then Just word else Nothing
 
