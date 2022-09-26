@@ -11,6 +11,7 @@ n // i = n `mod` i == 0
 
 fizzer :: Int -> String
 fizzer n
+  | n // 15 = "FizzBuzz"
   | n // 3 = "Fizz"
   | n // 5 = "Buzz"
   | otherwise = show n
