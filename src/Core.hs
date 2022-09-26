@@ -1,4 +1,7 @@
-module Core where
+module Core(
+  socrates
+  , fizzer
+) where
 
 socrates :: String
 socrates = "SoCraTes is awesome!!"
