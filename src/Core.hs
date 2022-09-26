@@ -1,6 +1,7 @@
 module Core(
   socrates
   , fizzer
+  , fizzerList
 ) where
 import           Data.Maybe (fromMaybe)
 

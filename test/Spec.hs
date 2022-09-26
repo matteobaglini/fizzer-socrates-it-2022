@@ -17,3 +17,5 @@ main = hspec $ do
     fizzer 5 `shouldBe` "Buzz"
   it "prints fizzbuzz" $ do
     fizzer (3*5) `shouldBe` "FizzBuzz"
+  it "prints a list" $ do
+    fizzerList [1,3,5,15] `shouldBe` "1, Fizz, Buzz, FizzBuzz"
