@@ -33,9 +33,4 @@ fizzer n = fromMaybe number $ fizz <> buzz
     whenDivBy word divisor = if n // divisor then Just word else Nothing
 
 fizzerList :: [Int] -> String
-fizzerList ns =
-  let
-    fizzered = map fizzer ns
-    separated = intersperse ", " fizzered
-    result = concat separated
-  in result
+fizzerList ns = concat $ intersperse ", " $ map fizzer ns
