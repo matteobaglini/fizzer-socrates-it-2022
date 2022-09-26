@@ -4,4 +4,4 @@ socrates :: String
 socrates = "SoCraTes is awesome!!"
 
 fizzer :: Int -> String
-fizzer n = show n
+fizzer = show
