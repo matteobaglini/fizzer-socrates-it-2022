@@ -13,3 +13,5 @@ main = hspec $ do
     fizzer 1 `shouldBe` "1"
   it "prints fizz" $ do
     fizzer 3 `shouldBe` "Fizz"
+  it "prints buzz" $ do
+    fizzer 5 `shouldBe` "Buzz"
