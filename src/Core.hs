@@ -3,6 +3,7 @@ module Core(
   , fizzer
   , fizzerList
 ) where
+import           Data.Foldable
 import           Data.List
 import           Data.Maybe
 
@@ -25,7 +26,7 @@ n // i = n `mod` i == 0
 --     Just a  <> Just b  = Just (a <> b)
 
 fizzer :: Int -> String
-fizzer n = fromMaybe number $ foldr (<>) Nothing rules
+fizzer n = fromMaybe number $ fold rules
   where
     fizz = "Fizz" `whenDivBy` 3
     buzz = "Buzz" `whenDivBy` 5
