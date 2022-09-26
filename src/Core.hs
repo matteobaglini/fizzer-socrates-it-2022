@@ -34,6 +34,7 @@ fizzer n = fromMaybe number $ fold rules
     rules = [fizz, buzz, bang]
     number = show n
     whenDivBy word divisor = if n // divisor then Just word else Nothing
+    whenContains word value = if show value `isInfixOf` show n then Just word else Nothing
 
 fizzerList :: [Int] -> String
 fizzerList = intercalate ", " . map fizzer
