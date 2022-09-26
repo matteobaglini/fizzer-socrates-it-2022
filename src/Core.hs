@@ -2,6 +2,7 @@ module Core(
   socrates
   , fizzer
 ) where
+import           Data.Maybe (fromMaybe)
 
 socrates :: String
 socrates = "SoCraTes is awesome!!"
@@ -10,11 +11,7 @@ socrates = "SoCraTes is awesome!!"
 n // i = n `mod` i == 0
 
 fizzer :: Int -> String
-fizzer n
-  | n // 15 = "FizzBuzz"
-  | n // 3 = "Fizz"
-  | n // 5 = "Buzz"
-  | otherwise = show n
+fizzer n = fromMaybe number $ fizz <> buzz
   where
     fizz = "Fizz" `whenDivBy` 3
     buzz = "Buzz" `whenDivBy` 5
