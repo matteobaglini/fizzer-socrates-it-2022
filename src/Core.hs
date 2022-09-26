@@ -29,3 +29,6 @@ fizzer n = fromMaybe number $ fizz <> buzz
     buzz = "Buzz" `whenDivBy` 5
     number = show n
     whenDivBy word divisor = if n // divisor then Just word else Nothing
+
+fizzerList :: [Int] -> String
+fizzerList = undefined
