@@ -10,4 +10,7 @@ socrates = "SoCraTes is awesome!!"
 n // i = n `mod` i == 0
 
 fizzer :: Int -> String
-fizzer n = if n // 3 then "Fizz" else if n // 5 then "Buzz" else show n
+fizzer n
+  | n // 3 = "Fizz"
+  | n // 5 = "Buzz"
+  | otherwise = show n
