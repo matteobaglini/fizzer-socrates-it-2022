@@ -3,7 +3,8 @@ module Core(
   , fizzer
   , fizzerList
 ) where
-import           Data.Maybe (fromMaybe)
+import           Data.List
+import           Data.Maybe
 
 socrates :: String
 socrates = "SoCraTes is awesome!!"
@@ -32,4 +33,9 @@ fizzer n = fromMaybe number $ fizz <> buzz
     whenDivBy word divisor = if n // divisor then Just word else Nothing
 
 fizzerList :: [Int] -> String
-fizzerList = undefined
+fizzerList ns =
+  let
+    fizzered = map fizzer ns
+    separated = intersperse ", " fizzered
+    result = concat separated
+  in result
