@@ -15,3 +15,5 @@ fizzer n
   | n // 3 = "Fizz"
   | n // 5 = "Buzz"
   | otherwise = show n
+  where
+    whenDivBy word divisor = if n // divisor then Just word else Nothing
